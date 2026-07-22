@@ -2,6 +2,11 @@
 
 All notable changes to the powershell-script-reviewer skill are documented in this file.
 
+## [1.2.2] - 2026-07-22
+
+### Added
+- New check in SKILL.md Step 4 (Correctness and reliability): **computed-but-unused values**. Found via a stress test that ran a deliberately bugged script through the full review procedure — a script queried Graph to build a "stale profiles" list, then deleted everything under a target path unconditionally without ever consulting that list. Nothing in the prior 9-step procedure explicitly asked whether a computed value is actually consumed by the logic that follows, so this class of bug (script's real behavior silently diverging from what its own code claims to do) could slip past a review that otherwise caught every other planted defect.
+
 ## [1.2.1] - 2026-07-22
 
 Verification pass: PowerShell 7.6.4 was installed in the authoring environment so every
