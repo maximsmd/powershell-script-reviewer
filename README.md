@@ -27,6 +27,9 @@ cp -r powershell-script-reviewer ~/.claude/skills/
 
 Or unzip the packaged skill:
 
+Download the packaged skill from the
+[latest release](../../releases/latest), then:
+
 ```bash
 unzip powershell-script-reviewer.skill -d ~/.claude/skills/
 ```
